@@ -1,0 +1,348 @@
+db.emps1.insert(
+{empid:102,
+empname:'shweta',
+empsal:4999
+});
+
+all in bytre
+db.createCollection('customer', {capped:true, autoIndexID:true,size:3000,max:4});
+db.createCollection('customer', {capped:true,size:3000,max:4});
+
+---> max:4:---> only 4 recs allowed this is good for log keeping
+
+it will allow to insert you but only 4 random recs will be saved
+
+db.customer.insert({custid:101,name:"shweta"});
+db.customer.insert({custid:102,name:"naveen"});
+db.customer.insert({custid:103,name:"iti"});
+db.customer.insert({custid:104,name:"ram"});
+db.customer.insert({custid:105,name:"sam"});
+
+
+
+db.drop collection <collectionname>
+
+
+for import:
+
+{}
+{}
+{}
+
+
+gives array of jason objects
+[{},{},{}]
+
+mongodump--> when importing data from mongo db to mongo db
+
+
+{custid:101,cutname:'rama'}
+{custid:101,cutname:'deepak'}
+{custid:101,cutname:'vinay'}
+
+Populationrec.json
+
+is you want to importdata in array fashion
+[{custid:101,cutname:'rama'},
+{custid:101,cutname:'deepak'},
+{custid:101,cutname:'vinay'}]
+
+mongoimport --host localhost --port 27018  --db sdet3 --collection population --file Populationrec.json --jasonArray
+
+
+
+mongoimport --host localhost --port 27018  --db sdet3 --collection cust--file Populationrec.json --jasonArray
+
+
+
+SELECTION(where clause)
+
+{}--> first one is condition
+{}-->
+db.cust.find({custid:101});
+
+i need some one where id >101
+db.cust.find({custid:
+			{$gt:101
+}
+})
+
+
+
+db.cust.find({custid:101},{custid:1});
+
+>
+> db.cust.find({custid:101},{custid:1});
+{ "_id" : ObjectId("58b45bebaef8d6ff2f81bf4c"), "custid" : 101 }
+{ "_id" : ObjectId("58b45bebaef8d6ff2f81bf4d"), "custid" : 101 }
+{ "_id" : ObjectId("58b45bebaef8d6ff2f81bf4e"), "custid" : 101 }
+
+
+if you don't wnat to see objetc id: ( specify: _id:0)
+db.cust.find({custid:101},{custid:1, _id:0});
+
+> db.cust.find({custid:101},{custid:1, _id:0});
+{ "custid" : 101 }
+{ "custid" : 101 }
+{ "custid" : 101 }
+
+
+
+
+
+db.emps3.insert(
+{empid:101,
+empname:'toshav',
+empsal:4999
+});
+
+
+db.emps1.insert(
+{empid:102,
+empname:'rajr',
+empsal:53434
+});
+
+
+db.emps1.insert(
+{empid:103,
+empname:'naina',
+empsal:577
+});
+
+//this returns iterator
+var itr=db.emps1.find();
+
+while(itr.hasNext()){
+var temp= itr.next();
+print(temp);
+
+var itr=db.emps1.find();
+while(itr.hasNext()){
+var temp= itr.next();
+print(temp.empid +', '+ temp.empsal);
+
+}
+
+var itr=db.emps1.find();
+while(itr.hasNext()){
+ var temp = itr.next();
+db.emps2.insert({'empid':temp.empid, 'empname':temp.empname});
+}
+
+
+db.emps1.update ({},{$set:{city:'Rewa'},{upset:true}}
+
+
+
+db.emps1.insert(
+{empid:106,
+empname:'naina',
+empsal:577
+});
+
+
+
+
+db.emps1.insert(
+{empid:107,
+empname:'naina',
+empsal:577
+});
+
+
+
+-- on collection emps1
+
+db.emps1.find().sort({empid:1});
+
+//desc order
+db.emps1.find().sort({empid:-1});
+
+//top 3 sal emp
+
+db.emps1.find().sort({empdsal:-1}).limit(3);
+
+//skips 1st 3 then give you rest recs
+db.emps1.find().sort({empdsal:-1}).skip(3).limit(3);
+
+//sorted dec order on sal then skip 3 recs then limit number of recs you want
+//1 is show 0 is no show, -1 is ascending sort
+db.emps1.find({},{empid:1,_id:0}).sort({empsal:-1});
+//find on empid =1
+db.emps1.find({empid:1},{empid:101,_id:0}).sort({empsal:-1});
+
+
+db.emps1.find({});
+db.emps1.find({},{empid:101});
+db.emps1.find({},{empid:101,_id:0}).sort({empsal:-1});
+
+
+
+
+in clause:
+
+//to find emp in 101,102,103
+db.emps1.find({empid:{$in:[101,102,103]}});
+
+
+ANd condition
+--to show employees who are in 101,102 ,103 and sal > 4000
+
+db.emps1.find({empid:{$in:[101,102,103]}, empsal:{$gt:4000}},{_id:0}).sort({empsal:-1});
+
+--sort desc order of sal
+
+
+OR clasue:
+
+db.emps1.find({$or:[{empid:{$in:[101,102,103]},empsal:{$gt:4000}}]});
+
+
+
+
+---EMBEDDED DOCUMENT ( FK relationship)
+
+
+db.account.insert({
+accid:101,
+balance:1000,
+    customer:{
+		custd:'c101',
+		custname:'rajol',
+},
+	location:'Reston'
+});
+
+
+db.account.insert({
+accid:102,
+balance:400,
+    customer:{
+		custd:'c102',
+		custname:'britt',
+},
+	location:'Reston'
+});
+
+
+
+db.account.find({'customer.custname':'britt'}).pretty();
+
+
+
+ARRAY: 
+db.food.insert({_id:1,type:'food', item:'aaa',ratings:[5,8]});
+
+db.food.insert({_id:2,type:'food', item:'bbb',ratings:[5,5,8]});
+
+
+
+db.food.find({ratings:[5,8]});
+
+
+//element whose first val is 5
+
+
+db.food.find({'ratings.0':5});
+
+//find any item whose rating is more than 5
+
+db.food.find({ratings:{$elemMatch:{$gt:5}}});
+
+
+//less than
+db.food.find({ratings:{$elemMatch:{$lt:5}}});
+
+
+
+
+UPDATE:
+//to update only one place where sal is gt than 3000
+db.emps.find({empsal:{$gt:3000}});
+
+
+db.emps.update({empsal:{$gt:3000}},{set:{city:'Reston'}})
+
+
+//to update everywhere where sal is gt tham 3000
+
+db.emps.update(
+{empsal:{$gt:3000}},
+{set:{city:'Reston'}},
+{multi:true});
+
+DELETE: NO concept of truncate
+//all recs will be deleted
+
+db.emps.remove({});
+
+
+//to delete specific
+
+db.emps.remove({empid:101});
+
+
+
+// update if found and insert if not presenr
+
+db.emps1.update(
+{empid:101},
+{$set:{city:'Rewa'}},
+{upsert:true});
+
+//to  update particular id
+
+db.devices.save({ "_id" : ObjectId("58b4908025a94e558bacb839"), "name" : " lenova laptop" })
+>
+
+
+db.devices.save({name:'laptop'})
+
+
+
+
+INDEXES:
+//create an index on asc order of sal
+db.emps1.createIndex({empsal :1});
+
+db.emps1.find({empsal:1});
+
+db.emps1.find({empsal:53434}).explain('executionStats');
+
+
+db.population.findOne();
+
+
+
+db.population.getIndexes();
+
+
+db.population.find(
+{pop:{$gt:30000}}).explain('executionStats');
+
+db.population.createIndex({pop :1});
+
+db.population.getIndexes();
+
+//to avoid dups, on enull is allowed
+
+db.emps1.createIndex({empid:1},{unique:true})
+
+
+db.emps1.insert({empid:101})
+
+to remove index:
+remove index
+
+to rebuild: ( also it can't be modified so it needs to be rebuild)
+db.tablename.reIndex()
+
+this is very expensive slows system so make it as backprocess
+
+
+
+db.emps1.stats()
+
+//stats of num of milli sec taken by each operations of collections
+mongotop --port 
