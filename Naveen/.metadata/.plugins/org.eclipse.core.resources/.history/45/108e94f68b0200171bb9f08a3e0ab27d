@@ -1,0 +1,15 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BasicTest01 {
+	public static void main(String[] args) {
+		WebDriver driver ; 
+		String baseUrl = "http://google.com";
+		
+		// we want to test on Chrome Browser
+		driver = new ChromeDriver();
+		
+	}
+}

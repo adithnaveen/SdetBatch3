@@ -1,0 +1,16 @@
+package com.fannie.generic;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class GenericTest01 {
+
+	
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

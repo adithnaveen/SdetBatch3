@@ -1,0 +1,143 @@
+public void someMethod(String name){
+	
+	if(condition){
+		// if it is checked exception then 
+		// it is mandatory to put this code with 
+		// in try - catch block or 
+		// have a throws clause 
+		try{
+		throw new MyException("Some Message");
+		catch(MyException me){}
+		catch(Exception e){}
+	}
+}
+
+// in this case the called should have the try-catch block
+public void someMethod(String name)
+	throws MyException {
+	
+	if(condition){
+		// if it is checked exception then 
+		// it is mandatory to put this code with 
+		// in try - catch block or 
+		// have a throws clause 
+		throw new MyException("Some Message");
+	}
+}
+
+
+
+Good Morning
+	Good Morning
+	Bonjour 
+	Namaste 
+	bondies 
+
+
+Map<String, List<String>> map = new 
+	HashMap<String, List<String>>();
+
+
+
+Map<String, String[]> map = new 
+	HashMap<String, String[]>();
+
+
+Set <? extends Number> set;
+Set <Integer> iset = new HashSet<Integer>();
+Set <Double> dset = new HashSet<Double>();
+Set <Byte> bset = new HashSet<Byte>();
+
+set = iset;
+
+
+
+
+
+// Naveen 
+Employee.java
+class Employee{
+	private int empId;
+
+}
+
+
+// Lee 
+Employee.java
+class Employee{
+	private int empNo;
+	private String empName;
+
+}
+
+
+
+
+
+
+Employee.java
+class Employee{
+	private int empId;
+
+}
+
+
+
+
+
+
+
+
+
+
+-------------------------------------- 
+Git commands - for working with github
+--------------------------------------
+
+go get the repository on the systrm 
+
+> git clone https://github.com/adithnaveen/sdet3.git
+
+then you can try adding some files 
+
+// for all files
+> git add . 
+
+> git commit -m "some message"
+
+> git push origin master 
+// will prompt for user name and password 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

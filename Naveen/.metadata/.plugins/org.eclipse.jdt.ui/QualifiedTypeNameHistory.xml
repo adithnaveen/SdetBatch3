@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.maxmind.geoip2.WebServiceClient"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="com.fanie.service.MessageService"/>
+<fullyQualifiedTypeName name="com.fannie.entity.Message"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response"/>
+<fullyQualifiedTypeName name="com.fannie.BMW"/>
+<fullyQualifiedTypeName name="com.fannie.Audi"/>
+<fullyQualifiedTypeName name="com.fannie.Car"/>
+<fullyQualifiedTypeName name="com.fannie.MyCar"/>
+<fullyQualifiedTypeName name="org.junit.Ignore"/>
+<fullyQualifiedTypeName name="com.fannie.beans.Message"/>
+<fullyQualifiedTypeName name="com.jayway.restassured.http.ContentType"/>
+<fullyQualifiedTypeName name="com.sun.messaging.Destination"/>
+<fullyQualifiedTypeName name="com.sun.messaging.jms.Connection"/>
+<fullyQualifiedTypeName name="com.fannie.entity.Emp"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
+<fullyQualifiedTypeName name="java.sql.Driver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="net.sourceforge.htmlunit.cyberneko.HTMLScanner.CurrentEntity"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+</qualifiedTypeNameHistroy>

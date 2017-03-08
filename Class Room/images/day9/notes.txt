@@ -1,0 +1,89 @@
+<h1>content</h1>
+
+<input />
+<img />
+<br />
+<hr />
+
+<article>someting goes here </article>
+body{margin:0}
+
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
+
+
+
+h1,h2,h3,h4,h5,h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}
+
+
+
+
+
+
+
+<style>
+	.mystyle{
+		font-family:arial;
+	}
+</style>
+
+
+
+
+
+
+
+
+<div id="mydiv" clsas="mystyle">
+	<h1>Sometext</h1>
+</div>
+
+
+
+
+
+file:///C:/JavaScriptWorks/Fifth.html?uname=+++++testing121212&pwd=
+
+
+
+
+x = parseInt(prompt("enter a number"));
+
+hi
+
+if(x != ???){
+
+}
+
+
+if(x == null)
+if(isNaN(x)){
+	sorry invlaid number 
+}
+
+
+https://jasmine.github.io/2.5/introduction
+
+
+
+"".mathc(/[0-9]+/);
+
+// jonh@doe.com
+
+j-p
+
+"".match(/[j-p][b-zA-Z0-9]+[@][a-zA-Z0-9]+[.]com/);
+
+
+
+http://bit.ly/2kUNCVk
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+package com.fannie.generic;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+/// this program will take locator and type and return 
+// ths web element 
+public class GenericMethod01 {
+
+	WebDriver driver;
+
+	public GenericMethod01(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	/**
+	 * 
+	 * @param locator
+	 * @param type
+	 * @See : User might as with id, name, xopath, linktext
+	 */
+	public WebElement getElement(String locator, String type) {
+		type = type.toLowerCase();
+		if (type.equals("id")) {
+			System.out.println("Element found with locator : " + locator);
+			return this.driver.findElement(By.id(locator));
+		} else if (type.equals("xpath")) {
+			System.out.println("Element found with locator : " + locator);
+
+			return this.driver.findElement(By.xpath(locator));
+		} else if (type.equals("css")) {
+			System.out.println("Element found with locator : " + locator);
+			return this.driver.findElement(By.cssSelector(locator));
+		} else if (type.equals("linktext")) {
+			System.out.println("Element found with locator : " + locator);
+			return this.driver.findElement(By.linkText(locator));
+		}
+		
+		
+		System.out.println("Sorry No locator found");
+		return null;
+	}
+
+
+
+	public List<WebElement> getElementList(String locator, String type){
+		type= type.toLowerCase();
+		
+		if(type.equals("id")){
+			this.driver.findElements(By.id(locator));
+		}else if (type.equals("xpath")) {
+			System.out.println("Element found with locator : " + locator);
+
+			return this.driver.findElements(By.xpath(locator));
+		} else if (type.equals("css")) {
+			System.out.println("Element found with locator : " + locator);
+			return this.driver.findElements(By.cssSelector(locator));
+		} else if (type.equals("linktext")) {
+			System.out.println("Element found with locator : " + locator);
+			return this.driver.findElements(By.linkText(locator));
+		}
+		
+		System.out.println("Sorry element not found");
+		return nul;l
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

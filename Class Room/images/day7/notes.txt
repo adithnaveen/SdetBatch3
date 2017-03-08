@@ -1,0 +1,79 @@
+http://yoursite.com/someresources/messenger 
+create , delete, update, reading 
+the response which i get is in POX 
+
+
+
+
+http://yoursite.com/someresources/messenger/create
+http://yoursite.com/someresources/messenger/update
+http://yoursite.com/someresources/messenger/delete
+http://yoursite.com/someresources/messenger/read
+
+level 2 says do level 1 with different error codes 
+
+
+http://localhost:8080/DynamicWorks/hi -> 404 
+
+
+http://localhost:8080/DynamicWorks/resources/message -> get -> all msgs 
+http://localhost:8080/DynamicWorks/resources/message/*
+
+
+
+http://localhost:8080/DynamicWorks/resources/message/1 -> get message with id 1
+
+http://localhost:8080/DynamicWorks/resources/message/1/comments/3 
+
+
+
+
+http://localhost:8080/DynamicWorks/resources/message/1/comments/3 -> get
+http://localhost:8080/DynamicWorks/resources/message/1/comments/3 -> delete
+
+
+
+
+http://localhost:9090/DynamicWorks/resources/message
+
+
+
+
+
+class Car{
+
+	?
+}
+
+
+
+class BMW extends Car{}
+class Audi extends Car
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

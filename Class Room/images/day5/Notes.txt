@@ -1,0 +1,139 @@
+
+
+
+goto mysql terminal 
+
+> show databases;
+
+> create database sdet3;
+
+> show databases; 
+
+> use sdet3; 
+
+> create table employee(
+	empid int primary key auto_increment, 
+	empname varchar(30), 
+	empsal decimal(9,2), 
+	empemail varchar(50));
+
+
+> desc employee;
+
+
+
+
+
+
+Class.forName("com.mysql.jdbc.Driver");
+Class.forName("oracle.jdbc.driver.OracleDriver");
+
+
+
+conn = DriverManager.getConnection("jdbc:mysql://localhost/sdet3", "root", "mysql");
+
+
+connection = DriverManager.getConnection(					"jdbc:oracle:thin:@localhost:1521:sdet3", "username","password");
+
+
+
+
+
+
+
+
+// sampel ant file 
+
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="oata.HelloWorld"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="build/jar/HelloWorld.jar" fork="true"/>
+    </target>
+</project>
+
+
+
+
+
+
+Write a java program to find the synonym for the given word 
+if the synonym is found then return the list of synonyms 
+else thrown an excpetion called SynonymNotFound with the message as 
+"sorry word not found in dictionary" 
+
+initialize the list of words in the map in the static section of the application 
+and thesame has to be invoked by Class.forName("");
+When ever the request for the synyom has come store the count in DB 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

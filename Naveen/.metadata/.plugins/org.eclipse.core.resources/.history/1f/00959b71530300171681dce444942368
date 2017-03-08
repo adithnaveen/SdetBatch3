@@ -1,0 +1,12 @@
+package com.fannie.generic;
+
+import org.openqa.selenium.WebElement;
+
+/// this program will take locator and type and return 
+// ths web element 
+public class GenericMethod01 {
+
+	public WebElement getElement(String locator, String type){
+		
+	}
+}

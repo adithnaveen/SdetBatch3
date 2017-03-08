@@ -1,0 +1,62 @@
+// checked exception 
+
+IOException
+FileNotFoundException
+SQLException 
+CloneNotSupportedException 
+etc 
+
+
+main(){
+	int x; 
+	cout << "Enter a number ";
+	cin >> x;
+	
+}
+
+
+
+ArrayList<Object> list =new ArrayList<Object>();
+list.add(100);
+list.add("hello");
+list.add(new Ant());
+list.add(new Elephant());
+
+
+ArrayList<Integer> list = new ArrayList<Integer>();
+
+
+String [] arr = new String[55];
+
+for(String temp : arr){}
+for(int i=0; i<arr.length; i+=2){}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

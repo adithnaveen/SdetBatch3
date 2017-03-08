@@ -1,0 +1,38 @@
+package com.fannie.testcase;
+
+import static org.junit.Assert.*;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestCase02 {
+
+	private WebDriver driver;
+	private String baseUrl;
+
+	@Before
+	public void setUp() throws Exception {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lenovo\\Desktop\\Selenium SDET3\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+		baseUrl = "http://naveenks.com/selenium/RegForm.html";
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(2000);
+		driver.quit();
+	}
+
+	@Test
+	public void testGoogleSite() {
+		
+	}
+
+}

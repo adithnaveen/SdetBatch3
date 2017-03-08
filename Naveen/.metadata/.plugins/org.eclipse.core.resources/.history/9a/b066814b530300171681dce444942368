@@ -1,0 +1,7 @@
+package com.fannie.generic;
+
+/// this program will take locator and type and return 
+// ths web element 
+public class GenericMethod01 {
+
+}

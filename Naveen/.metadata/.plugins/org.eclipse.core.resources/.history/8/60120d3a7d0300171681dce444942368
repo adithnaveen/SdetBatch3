@@ -1,0 +1,5 @@
+package com.fannie.generic;
+
+public interface IType {
+
+}

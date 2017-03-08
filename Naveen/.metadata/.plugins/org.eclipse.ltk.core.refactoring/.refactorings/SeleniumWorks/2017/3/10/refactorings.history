@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.fianni.implicitexplicit&apos; to &apos;com.fannie.implicitexplicit&apos;&#x0D;&#x0A;- Original project: &apos;SeleniumWorks&apos;&#x0D;&#x0A;- Original element: &apos;SeleniumWorks/tests/com.fianni.implicitexplicit&apos;&#x0D;&#x0A;- Renamed element: &apos;SeleniumWorks/tests/com.fannie.implicitexplicit&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.fianni.implicitexplicit&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/tests&lt;com.fianni.implicitexplicit" name="com.fannie.implicitexplicit" qualified="false" references="true" stamp="1488915709575" textual="false" version="1.0"/>
+</session>

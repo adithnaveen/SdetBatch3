@@ -1,0 +1,70 @@
+package com.fannie.testcase;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+// to test drop down 
+public class TestCase04 {
+
+
+	private WebDriver driver;
+	private String baseUrl;
+
+	@Before
+	public void setUp() throws Exception {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lenovo\\Desktop\\Selenium SDET3\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+		baseUrl = "https://www.expedia.com/";
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(4000);
+		driver.quit();
+	}
+
+	
+	
+	
+	@Test
+	public void test() {
+		
+		// package-rooms-hp-package -> rooms 
+		// package-1-adults-hp-package -> adult 
+		// package-1-children-hp-package -> kids 
+		
+		WebElement element1 = driver.findElement(By.id("package-rooms-hp-package"));
+		Select select1 = new Select(element1);
+		
+		List<WebElement> options= select1.getOptions();
+		
+		System.out.println("Number of option for element 1 -> " + options.size());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

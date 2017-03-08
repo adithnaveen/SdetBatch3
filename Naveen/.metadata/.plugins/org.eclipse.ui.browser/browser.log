@@ -1,0 +1,13 @@
+
+Feb 22, 2017 07:52:53.05 NEW SESSION
+Feb 22, 2017 07:52:53.05 1487778773045	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+Feb 22, 2017 07:52:53.08 1487778773083	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+Feb 22, 2017 07:52:53.12 1487778773119	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+Feb 22, 2017 08:51:31.14 [NPAPI 9456] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 333
+Feb 22, 2017 10:57:55.45 [Child 8324] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 333
+Feb 22, 2017 10:57:55.48 [Child 8324] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 333
+Feb 23, 2017 05:40:20.87 [Child 9532] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 333
+Feb 23, 2017 05:40:20.92 [Child 9532] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 333
+Feb 23, 2017 07:52:52.21 1487865172205	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+Feb 23, 2017 07:52:52.28 1487865172280	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+Feb 23, 2017 07:52:52.31 1487865172308	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property

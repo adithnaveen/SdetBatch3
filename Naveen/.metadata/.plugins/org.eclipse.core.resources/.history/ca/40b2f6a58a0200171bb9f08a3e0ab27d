@@ -1,0 +1,9 @@
+package com.fannie.basic;
+
+public class BasicTest01 {
+	public static void main(String[] args) {
+		WebDriver driver ; 
+		
+		
+	}
+}

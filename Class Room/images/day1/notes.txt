@@ -1,0 +1,157 @@
+class Object{
+	clone, equals, finalize, toString etc 
+}
+
+class Bulb extends Object{
+	// properties or variables 
+	// instance variables 
+	glassfilament 
+	gas 
+	holder 
+
+	// behaviours or methods 
+	on(){}
+	off(){}
+}
+
+
+Bulb led = new Bulb();
+Bulb led1 = new Bulb();
+Bulb led2 = new Bulb();
+Bulb led3 = new Bulb();
+Bulb led4 = new Bulb();
+Bulb led5 = new Bulb();
+Bulb led6 = new Bulb();
+Bulb led7 = new Bulb();
+
+int x; 
+
+
+
+package name : all lower case 
+class name : pascal casing (first char of the word in upper case ) HelloWorld PaySalary GetMySalary
+
+variable or methods : camel casing (first char is lower case then pascal casing)
+
+empName viewBalance empId name 
+viewBalance()
+
+
+constants : upper case  MAX 
+
+
+static int x; 
+printf("%d", x);
+
+
+public class Employee {
+	private int empId;
+	private double empSal;
+	private Name name;
+}
+
+
+public class Customer{
+	private int cId:
+	private double custSal;
+	private Name name;
+}
+
+
+public class Person{
+	private int pId;
+	private Name name;
+}
+
+
+public class Trainer{
+	private int tId;
+	private double tSal;
+	private Name name;
+}
+
+
+class Name{
+	private String lName;
+	private String fName;
+	private String mName;
+}
+
+
+
+
+
+class Emp{
+	Emp(){}
+
+}
+
+
+
+// simple  or single inhertance 
+// multi level inhertance 
+// you dont have multiple inheritance 
+
+
+class A{
+	protected featureOne
+}
+	
+class B extends A{
+	
+}
+
+class C extends B{
+	
+}
+
+			+ - * / % instanceOf
+
+4 + 4 
+3 - 5
+Object instanceOf class 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

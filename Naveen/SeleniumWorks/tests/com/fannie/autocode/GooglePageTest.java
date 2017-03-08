@@ -1,0 +1,46 @@
+package com.fannie.autocode;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+// this program was generated using selenium IDE 
+public class GooglePageTest {
+
+	 private WebDriver driver;
+	  private String baseUrl;
+
+	  @Before
+	  public void setUp() throws Exception {
+		  System.setProperty("webdriver.chrome.driver",
+					"C:\\Users\\Lenovo\\Desktop\\Selenium SDET3\\chromedriver.exe");
+		
+	    driver = new ChromeDriver();
+	    baseUrl = "https://www.google.com/";
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	  }
+
+	  @Test
+	  public void testClassRomTestCase02() throws Exception {
+	    driver.get(baseUrl + "/");
+	    driver.findElement(By.id("lst-ib")).clear();
+	    driver.findElement(By.id("lst-ib")).sendKeys("places near me");
+	    driver.findElement(By.id("_fZl")).click();
+	    driver.findElement(By.linkText("The Top 10 Things to Do in Herndon - TripAdvisor - Herndon, VA ...")).click();
+	  }
+
+	  @After
+	  public void tearDown() throws Exception {
+		  Thread.sleep(2000);
+	    driver.quit();
+	  }
+
+
+}

@@ -1,0 +1,55 @@
+package com.fannie.testcase;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import net.sourceforge.htmlunit.cyberneko.HTMLScanner.CurrentEntity;
+
+public class TestCase01 {
+
+	 private WebDriver driver;
+	  private String baseUrl;
+
+	  @Before
+	  public void setUp() throws Exception {
+		  System.setProperty("webdriver.chrome.driver",
+					"C:\\Users\\Lenovo\\Desktop\\Selenium SDET3\\chromedriver.exe");
+		
+	    driver = new ChromeDriver();
+	    baseUrl = "http://naveenks.com/selenium/RegForm.html";
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	  }
+
+
+	  @After
+	  public void tearDown() throws Exception {
+		  Thread.sleep(2000);
+	    driver.quit();
+	  }
+
+	  @Test
+	  public void naviageTest() throws Exception{
+		  driver.get(baseUrl);
+		  
+		  
+		  System.out.println("Title " + driver.getTitle());
+
+		  String currentURL = driver.getCurrentUrl();
+		  System.out.println("Current Url -> " + currentURL);
+		  
+		  // naviate to another page 
+		  // http://naveenks.com/selenium/LoginForm.html
+		  driver.navigate().to("http://naveenks.com/selenium/LoginForm.html");
+		  currentURL = driver.getCurrentUrl();
+		  
+		  System.out.println("Current URL " + currentURL);
+		  Thread.sleep(2500);
+		  driver.navigate().back();
+	  }
+
+}

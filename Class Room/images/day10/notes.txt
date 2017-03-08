@@ -1,0 +1,382 @@
+select 
+insert 
+update 
+delete 
+
+
+
+select name, sal from emp; 
+
+
+
+{}
+{
+	name:"harry"
+}
+
+{
+	name:"harry", 
+	contacts:[
+		personal:{
+			email:"a@a.com", 
+			phone : "+121212121"
+		},
+		professional:{
+			email:"a@b.com", 
+			phone : "+12125552121"
+		}
+		
+	]
+}
+
+
+
+
+
+download link for MongoDb community version 
+http://bit.ly/2lgs7JY
+
+
+-- to validate there are 3rd party vendors call 
+-- js lint 
+
+db.emps.insert({});
+
+> db.emps.insert({empid:101, 
+		empname:'kanchan', 
+		empsal:2000
+	});
+
+
+db.emps.insert({empid:102, 
+		empname:'sunita', 
+		empsal:3000
+	});
+
+
+
+
+
+db.emps.insert({ 
+		empname:'siva', 
+		empsal:4000
+	});
+
+
+
+
+
+> db.emps.find(); ->  db.emps.find({});
+// select * from emps;
+
+
+to know all collections in the Db
+
+> show collections;
+
+
+> db.emps.find().pretty();
+
+
+db.createCollection('account');
+
+
+
+db.createCollection('customer', {capped:true, autoIndexID:true, size:3000, max:4});
+
+
+
+db.customer.insert({custid:101, name:"Swetha"});
+db.customer.insert({custid:102, name:"Lee"});
+db.customer.insert({custid:103, name:"Chitti"});
+db.customer.insert({custid:104, name:"Parag"});
+db.customer.insert({custid:105, name:"Itishree"});
+
+
+
+{}
+{}
+{}
+
+[{},{},{}]
+
+
+>mongoimport --host localhost --port 27018 --db sdet3 --collection
+cust --file cust.json
+
+
+
+-- to import json file with array content 
+>mongoimport --host localhost --port 27018 --db sdet3 --collection
+cust --file cust.json --jsonArray
+
+
+
+db.cust.find({},{});
+
+
+
+select <projection>
+from cust 
+whree <selection>;
+
+db.cust.find({custid:101})
+
+
+
+
+db.cust.find(
+	{custid:
+		{
+			$gt:101
+		}
+	})
+
+// equi for mongo code 
+select * from cust where custid>101;
+
+
+
+
+db.cust.find({custid:101}, {custid:1, _id:0})
+
+
+
+
+
+
+
+db.emps11.insert({empid:101, empname:'kanchan', 
+		empsal:2000});
+
+
+db.emps11.insert({empid:102, 	empname:'sunita', 
+		empsal:3000});
+
+
+
+db.emps11.insert({empid:103, 	empname:'siva', 
+		empsal:4000});
+
+db.emps11.insert({empid:104, 	empname:'Britt', 
+		empsal:5000});
+
+db.emps11.insert({empid:105, 	empname:'Mustafa', 
+		empsal:6000});
+
+db.emps11.insert({empid:106, 	empname:'Kenrick', 
+		empsal:7000});
+
+
+db.emps11.insert({empid:107, 	empname:'Raymond', 
+		empsal:7000});
+
+
+
+
+
+
+
+
+
+
+// this will return the iterator 
+// this will display only id and sal 
+var itr=db.emps1.find();
+
+while(itr.hasNext()){
+	var temp = itr.next();
+	print(temp.empid+', ' + temp.empsal);
+}
+
+
+
+
+
+// this will return the iterator 
+// this will display only id and sal 
+// and store into emps2 collection 
+var itr=db.emps1.find();
+
+while(itr.hasNext()){
+	var temp = itr.next();
+	db.emps2.insert({'empid':temp.empid, 'empname':temp.empname});
+}
+
+
+
+{
+	empid:1, 
+	empsal:-1
+}
+
+
+
+
+
+
+
+
+-- on collection emps1 
+
+// ascending order 
+db.emps1.find().sort({empid:1});
+
+// descending order 
+db.emps1.find().sort({empid:-1});
+
+
+
+
+
+
+// top 3 salaried emps  
+db.emps1.find().sort({empsal:-1}).skip(3).limit(3);
+
+
+
+db.emps1.find({},{empsal:1,_id:0}).sort({empsal:-1});
+
+
+
+
+-- in clause 
+to find all emps who are int 101, 102, 103, 104 
+
+db.emps1. find({empid:{$in:[101, 102, 103, 104 ]}});
+
+
+
+-- to show emps who are in 104, 105, 106, 107, and 
+-- salary > 5000 
+db.emps1.find(
+	{empid:{$in:[104, 105, 106, 107]}, 
+	empsal:{$gt:5000}}, 
+	{_id:0}).
+	sort({empsal:-1});
+
+
+db.emps1.find({$or:[{empid:{$in:[104, 105, 106, 107]},
+	      empsal:{$gt:5000}}]
+	});
+
+
+
+	
+	
+--embedded documents 
+db.account.insert({
+	accid:101, 
+	balance:10000, 
+	customer:{
+		custid:'C101', 
+		custname:'Lei'
+	}, 
+	location:'Reston'
+	
+})
+	
+db.account.insert({
+	accid:102, 
+	balance:20000, 
+	customer:{
+		custid:'C102', 
+		custname:'Britt'
+	}, 
+	location:'Reston'
+	
+})
+	
+
+db.account.find({'customer.custname':'Britt'}).pretty();
+	
+	
+	
+	
+db.food.insert({_id:1, type:'food', item:'aaa', ratings:[5,8]});
+	
+db.food.insert({_id:2, type:'food', item:'bbb', ratings:[5,8, 8]});
+	
+db.food.insert({_id:3, type:'food', item:'ccc', ratings:[2, 5,9]});
+	
+	
+-- exact match 
+db.food.find({ratings:[5,8]})
+	
+-- search any where in array 
+db.food.find({ratings:8})
+
+-- first value in array is 5 
+db.food.find({'ratings.0':5})
+	
+	
+-- any item whos rating is more than 5 
+db.food.find({ratings:{$elemMatch:{$gt:8}}})
+	
+
+db.food.find({ratings:{$elemMatch:{$lt:5}}})
+	
+
+
+--- update records 
+
+// this will find all records but update only 1 
+db.emps1.update({empsal:{$gt:5000}}, {$set:{city:'Reston'}})
+
+
+
+-- to update all matching records 
+db.emps1.update(
+	{empsal:{$gt:5000}}, 
+	{$set:{city:'Reston'}}, 
+	{multi:true}
+);
+
+
+db.emps.remove({empid:101});
+
+
+
+db.emps1.update({empid:1}, {$set:{city:'Cupertino'}}, {upsert:true})
+
+
+
+
+db.emps1.update({empid:1}, {$set:{city:'Herndon'}}, {upsert:true})
+
+
+db.devices.save(
+	{
+		"_id" : ObjectId("58b49068e19261f73870a6f0"), 
+		name:'lenovo laptop'
+	})
+
+
+-- create an index on asc order of sal 
+db.emps1.createIndex({empsal:1});
+
+
+
+db.emps1.find({empsal:6000}).explain('executionStats');
+
+
+db.population.find({pop:{$gt:30000}}).explain('executionStats');
+
+db.population.createIndex({pop:1})
+
+// go show all indexes on the collection 
+db.population.getIndexes();
+
+
+db.emps1.createIndex({empid:1}, {unique:true})
+
+db.emps1.insert({empid:101})
+
+
+
+
+
+
+
+
+

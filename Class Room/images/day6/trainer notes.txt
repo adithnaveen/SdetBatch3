@@ -1,0 +1,229 @@
+eclipse jee download link for mars 
+
+http://bit.ly/1oFeNR0
+
+
+// you will get url 
+
+
+
+<servlet>
+	<servlet-name>hello</servlet-name>
+	<servlet-class>com.fannie.HelloWorld</servlet-class>
+</servelt>
+
+
+
+<servlet-mapping>
+<servlet-name>hello</servlet-name>
+<url-mapping>/donttouchme.html</url-mapping>
+</servlet-mapping>
+
+
+
+
+
+
+
+apache - tomcat 
+oracle - weblogic 
+ibm - web shphere 
+jboss - jboss 
+sun - glassfish 
+
+interface Servlet{
+	// some methods which is written by SUN 
+}
+
+
+// third party vendors implenmnt this 
+
+
+class HttpServlet implements Servlet{
+	
+}
+
+
+i'm developer 
+
+class HelloWorld extends HttpServlet{
+	public void doGet(HttpServletRequest req, HttpServletResponse Res){
+		res.setContentType("text/html");
+		PrintWriter out = res.getWriter();
+		out.println(<h1>Hello World</h1>);
+	}
+
+
+public void doPost(HttpServletRequest req, HttpServletResponse Res){
+
+	}
+}
+
+
+
+
+
+class SingleTon{
+	private SingleTon(){
+	// your generation will go here 
+	}
+
+
+	public static SingleTon getSingleTon(SingleTon s){
+		if(s == null){
+			return new SingleTon();
+		}else{
+			return s;
+		}
+	}
+}
+
+
+
+
+
+class Client{
+	public static void main(String args[]){
+		SingleTon s;
+
+		s = getSingleTon(s);
+		s = getSingleTon(s);
+		s = getSingleTon(s);
+		s = getSingleTon(s);
+		s = getSingleTon(s);
+		s = getSingleTon(s);
+		s = getSingleTon(s);
+
+
+	}
+}
+
+
+
+
+
+
+
+yoursite.com?uname=harry&pwd=potter 
+
+
+
+yousite.com 
+
+
+
+
+
+
+App
+	
+	WEB-INF
+		web.xml
+		lib
+		classes
+.html
+.jsp
+.jsf 
+.css
+.js
+
+
+
+
+
+adaptor pattern
+
+
+abstract class AllRules{
+	
+
+	public abstract void one();
+	public abstract void two();
+	public abstract void three();
+	public abstract void four();
+}
+
+
+
+
+class HttpServlet extends AllRules implements Servlet{
+	public abstract void one(){}
+	public abstract void two(){}
+	public abstract void three(){}
+	public abstract void four(){}
+}
+
+class HelloWorld extends HttpServlet{
+	public abstract void two(){}
+}
+
+
+
+// sample xml document 
+
+<?xml version="1.0"?>
+
+<emps>
+	<emp salutation="mr">
+		<name>
+			<fname>Harry</fname>
+			<lname>potter</lname>
+		</name>
+		<age>33</age>
+		<dept-name>Accounts</dept-name>
+	</emp>
+
+	<emp salutation="mr">
+		<name>
+			<fname>Harry</fname>
+			<lname>potter</lname>
+		</name>
+		<age>33</age>
+		<dept-name>Accounts</dept-name>
+	</emp>
+</emps>
+
+
+{
+	emps:[
+		emp:{
+			salutation:"mr", 
+			name:{
+				fname:"harry", 
+				lname:"potter"
+			}, 
+			age:33, 
+			dept-name:"Accounts"
+		}
+		emp:{}
+	]
+}
+
+
+
+
+
+http://bit.ly/2lrNyJy
+
+
+
+
+https://mail.google.com/mail/u/0/#inbox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

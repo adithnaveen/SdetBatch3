@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bookStore>
+    <books>
+        <book>
+            <isbn>12112</isbn>
+            <title>Let US C</title>
+            <author>Yahwanth Kanetkar</author>
+            <publisher>WILEY</publisher>
+        </book>
+        <book>
+            <isbn>222333</isbn>
+            <title>Complete Reference Java</title>
+            <author>Naughton</author>
+            <publisher>Pearson</publisher>
+        </book>
+    </books>
+    <location>Bengaluru</location>
+    <name>Sapna Book Store</name>
+</bookStore>

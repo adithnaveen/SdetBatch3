@@ -1,0 +1,6 @@
+package com.fannie.generic;
+
+public interface IType {
+	String XPATH="xpath";
+	String ID = "id";
+}

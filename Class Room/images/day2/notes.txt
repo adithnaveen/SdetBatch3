@@ -1,0 +1,189 @@
+class MyClass{
+	private int pri_x;
+	private int pro_x;
+
+	public myMethod(){
+		// i can access pri_x 
+	}
+	protected void setPro_X(int pro_x){
+		this.pro_x = pro_x;
+	}
+}
+
+class YourClass extends MyClass{
+	public someMethod(){
+		pri_x = 23;
+	}
+
+	
+}
+
+class abstract Vehicle{
+	abstract move();
+}
+
+// if the extending class doesnot know how to 
+// override then the child can also become 
+// abstract 
+
+clsas abstract FourWheeler extends Vehicle{
+	abstract steering();
+}
+
+class Car extends FourWheeler{
+	// it is mandatory to override all the 
+	// methods which did not had the implementation 
+
+	abstract move(){}
+	abstract steering(){}
+}
+
+// interfaces does not take any property from 
+// Object class 
+interface Figure{
+	int x; 
+	void hi();
+}
+
+// this will be transformed 
+
+interface Figure{
+	public static int final x;
+	public abstract void hi();
+}
+
+class Rect implements Figure{
+	void hi(){///// }
+}
+Figure f = new rectangle();
+f.hi();
+
+
+
+
+
+
+
+
+
+
+// to connect to Db 
+
+try{
+	open DB connection 
+	process -> some problem  
+	
+}catch(SQLException s){
+	// give you some message 
+}	
+finally{
+	close 
+}
+
+
+// exception 
+// if the code is within try-catch then if exception happens it could be caught and rest of the BL still executes 
+
+try{
+	try{}catch(specific s){}
+}
+catch(specific s){
+	try{
+	}catch(){}
+}
+catch(specific s){}
+catch(specific s){}
+catch(specific s){}
+catch(Generic g){} -> Exception 
+finally{
+	try{}
+	catch(){}
+}
+
+
+main(){
+	hi();
+}
+
+hi(){
+	bye();
+}
+
+bye(){
+	hello();
+}
+hello(){
+	gives error 
+}
+
+
+
+
+// static 
+class Maths{
+	public int add(int a, int b){
+		return a+ b;
+	}
+
+
+	public static void main(String args[]){
+		Maths m = new Maths();
+		syso(m.add(10, 20));	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

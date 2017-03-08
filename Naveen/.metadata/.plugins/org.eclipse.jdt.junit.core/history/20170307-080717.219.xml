@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestCase04" project="SeleniumWorks" tests="3" started="3" failures="0" errors="0" ignored="2">
+  <testsuite name="com.fannie.testcase.TestCase04" time="10.856">
+    <testcase name="getSubmitButtonValue" classname="com.fannie.testcase.TestCase04" time="10.855"/>
+    <testcase name="multiSelectTest" classname="com.fannie.testcase.TestCase04" time="0.0" ignored="true"/>
+    <testcase name="test" classname="com.fannie.testcase.TestCase04" time="0.001" ignored="true"/>
+  </testsuite>
+</testrun>

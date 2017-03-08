@@ -1,0 +1,23 @@
+package com.fannie.basic;
+
+import java.sql.Driver;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BasicTest03 {
+	public static void main(String[] args) {
+		String baseUrl ="http://naveenks.com/selenium/RegForm.html";
+		
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Lenovo\\Desktop\\Selenium SDET3\\chromedriver.exe");
+
+			WebDriver driver = new ChromeDriver();
+			
+			driver.get(baseUrl);
+			driver.manage().window().maximize();
+	
+			
+	
+	}
+}

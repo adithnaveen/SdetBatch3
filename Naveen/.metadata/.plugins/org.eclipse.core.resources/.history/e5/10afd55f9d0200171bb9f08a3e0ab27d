@@ -1,0 +1,7 @@
+package com.fannie.basic;
+
+public class BasicTest03 {
+	public static void main(String[] args) {
+		String baseUlr ="http://naveenks.com/selenium/RegForm.html";
+	}
+}

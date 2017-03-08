@@ -1,0 +1,31 @@
+package com.fannie.generic;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+/// this program will take locator and type and return 
+// ths web element 
+public class GenericMethod01 {
+
+	WebDriver driver; 
+	public GenericMethod01(WebDriver driver){
+		this.driver = driver;
+	}
+	
+	
+	/**
+	 * 
+	 * @param locator
+	 * @param type
+	 * @See : User might as with id, name, xopath, linktext
+	 */
+	public WebElement getElement(String locator, String type){
+		type = type.toLowerCase();
+		if(type.equals("id")){
+			return this.driver.findElement(By.id(locator));
+		} else if(type.equals("xpath")){
+			return this.driver.findElement(By.xpath(locator));
+		}
+	}
+}
