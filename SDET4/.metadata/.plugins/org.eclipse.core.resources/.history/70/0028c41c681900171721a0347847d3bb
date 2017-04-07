@@ -1,0 +1,8 @@
+package com.fannie.soap.timeserver;
+
+public class TimeServerPublish {
+	public static void main(String[] args) {
+		String publicAddress ="http://127.0.0.1:9876/fannie";
+		
+	}
+}

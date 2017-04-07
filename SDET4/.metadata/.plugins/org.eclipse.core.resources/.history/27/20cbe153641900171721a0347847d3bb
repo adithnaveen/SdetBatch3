@@ -1,0 +1,8 @@
+package com.fannie.soap.timeserver;
+
+import javax.jws.WebService;
+
+@WebService
+public interface ITimeServer {
+
+}

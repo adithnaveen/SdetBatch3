@@ -1,0 +1,19 @@
+package com.fannie.test;
+
+
+class Hello{
+	
+}
+
+public class Testing {
+	public static void main(String[] args) {
+		new Hello();
+		new Hello();
+		new Hello();
+		new Hello();
+		new Hello();
+		new Hello();
+		
+		System.out.println("object created ");
+	}
+}

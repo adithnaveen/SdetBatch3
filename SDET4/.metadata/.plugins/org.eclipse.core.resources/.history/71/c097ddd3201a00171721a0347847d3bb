@@ -1,0 +1,56 @@
+package com.fannie.resources;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.fannie.beans.Message;
+import com.fannie.service.MessageService;
+
+@Path("/message")
+public class MessageResources {
+	
+	static MessageService messageService = new MessageService();
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Message> getMessages() {
+		return messageService.getAllMessages();
+	}
+	
+	
+	
+
+	@GET
+	@Path("/{messageId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Message getMessage(@PathParam("messageId") long messageId) {
+		// Assuming we get the details from the Db
+
+		Message message = messageService.getMessage(messageId);
+		return message;
+	}
+	
+	
+
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Message postMessage(Message message) {
+		return messageService.insertMessage(message);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,7 @@
+package com.fannie.soap.client;
+
+public class TimerClient {
+	public static void main(String[] args) {
+		
+	}
+}

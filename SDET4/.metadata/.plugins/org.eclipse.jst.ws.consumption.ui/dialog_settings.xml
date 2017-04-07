@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.jst.ws.internal.consumption.ui.widgets.test.ClientTestWidget.sampleFolderText_">
+		<item value="sampleITimeServerProxy"/>
+	</list>
+	<list key="org.eclipse.jst.ws.client.type.java">
+		<item value="http://127.0.0.1:9876/fannie?WSDL"/>
+	</list>
+</section>

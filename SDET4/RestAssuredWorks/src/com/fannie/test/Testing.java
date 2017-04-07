@@ -1,0 +1,30 @@
+package com.fannie.test;
+
+import java.io.Serializable;
+
+class Hello implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void finalize() throws Throwable {
+
+		System.out.println("Cleaning can be done here ");
+	}
+	
+}
+
+public class Testing {
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) {
+		Runtime.runFinalizersOnExit(true);
+		new Hello();
+		new Hello();
+		new Hello();
+		new Hello();
+		new Hello();
+		new Hello();
+		
+		System.out.println("object created ");
+	}
+}

@@ -1,0 +1,8 @@
+package com.fannie.resources;
+
+import javax.ws.rs.Path;
+
+@Path("/hello")
+public class HelloResource {
+
+}

@@ -1,0 +1,23 @@
+package com.fannie.soap.timeserver;
+
+public class TimeServerImp implements ITimeServer {
+
+	@Override
+	public String checkCreditScore(String name, int score) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getAddress() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getPrice(String from, String to) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

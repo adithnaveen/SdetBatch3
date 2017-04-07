@@ -1,0 +1,12 @@
+package com.fannie.soap.client;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class TimerClient {
+	public static void main(String[] args) 
+			throws MalformedURLException {
+		URL url = new URL("http://127.0.0.1:9876/fannie?WSDL");
+		
+	}
+}

@@ -1,0 +1,7 @@
+package com.fannie.soap.timeserver;
+
+public class TimeServerPublish {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,43 @@
+package com.fannie;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fannie.beans.Emp;
+import com.fannie.dao.EmpDAO;
+
+/**
+ * Servlet implementation class GetAllEmpsController
+ */
+@WebServlet("/getemps")
+public class GetAllEmpsController extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		EmpDAO dao = new EmpDAO();
+		List<Emp>  emps = dao.getAllEmps();
+		
+		String uri ="/WEB-INF/views/showall.jsp";
+		
+		request.setAttribute("EMPS", emps);
+		request.getRequestDispatcher(uri).forward(request, response);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

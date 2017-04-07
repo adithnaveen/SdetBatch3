@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="ShowMulti.jsp">
+		<table border="3">
+			<tr>
+				<td>Enter a number </td>
+				<td><input type="text" name="val" /></td>
+			</tr>
+			<tr>
+				<td><input type="reset" /></td>
+				<td><input type="submit"  value="Show"/></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

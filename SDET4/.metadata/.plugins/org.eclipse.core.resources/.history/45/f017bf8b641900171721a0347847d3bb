@@ -1,0 +1,16 @@
+package com.fannie.soap.timeserver;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+@WebService
+public interface ITimeServer {
+
+	@WebMethod
+	public String checkCreditScore(String name, int score);
+
+	@WebMethod
+	public String getAddress();
+	
+	public int getPrice(String from, Stirng to);
+}

@@ -1,0 +1,17 @@
+package com.fannie.messagetest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MessageTest {
+
+
+	
+	 @Test
+	public void googleTest() {
+		given().when().get("http://google.com").then().statusCode(200);
+	}
+
+
+}

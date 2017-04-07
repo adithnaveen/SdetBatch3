@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/com/fannie/soap/timeserver/ITimeServer.java=UTF-8
+encoding//src/timeserver/fannie/TimeServerPortBindingStub.java=UTF-8
+encoding//src/timeserver/fannie/TimeServerService.java=UTF-8

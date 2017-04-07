@@ -1,0 +1,17 @@
+package com.fannie.beans;
+
+public class Snippet {
+	
+	
+	public void sayHi(){
+
+			myownmethod();
+	}
+
+	private void myownmethod() {
+		for(int i=0; i<10; i++){
+			System.out.println(i);
+		}
+	}
+}
+

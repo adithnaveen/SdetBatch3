@@ -1,0 +1,16 @@
+package com.fannie.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fannie.beans.Emp;
+
+public class EmpDAO {
+	public List<Emp> getAllEmps(){
+		// assume that this method will connect 
+		// to DB to get all emps 
+		// which comes from Week 1 
+		List<Emp> emps = new ArrayList<Emp>();
+		
+	}
+}

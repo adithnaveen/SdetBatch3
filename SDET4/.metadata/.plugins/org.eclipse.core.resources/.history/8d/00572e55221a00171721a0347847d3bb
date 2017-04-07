@@ -1,0 +1,10 @@
+package com.fannie.beans;
+
+public class Snippet {
+	
+	
+	public void sayHi(){
+		//something 
+	}
+}
+

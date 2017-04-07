@@ -1,0 +1,12 @@
+package com.fannie.resources;
+
+
+@Path("/hello")
+public class HelloResource {
+
+	@GET
+	@Produces("text/html")
+	public String sayHello(){
+		return "<html><body><h2>Welcome To RESTfull Services</h2></body></html>";
+	}
+}

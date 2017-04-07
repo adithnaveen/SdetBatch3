@@ -1,0 +1,10 @@
+package com.fannie.soap.timeserver;
+
+import javax.jws.WebService;
+
+@WebService
+public interface ITimeServer {
+
+	public checkCreditScore(String name, int score);
+	
+}

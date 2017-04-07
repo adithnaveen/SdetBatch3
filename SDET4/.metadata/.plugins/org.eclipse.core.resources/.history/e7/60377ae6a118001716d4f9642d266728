@@ -1,0 +1,30 @@
+package com.fannie;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class LoginValidate
+ */
+@WebServlet("/validate")
+public class LoginValidate extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String uName = request.getParameter("uname");
+		String pass = request.getParameter("pass");
+		
+		// this shall be connected to DB to check the 
+		// validation 
+		if(uName.equals("fannie") && pass.equals("test")){
+			// success 
+		}else{
+			// failure 
+		}
+	}
+
+}

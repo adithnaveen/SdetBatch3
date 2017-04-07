@@ -1,0 +1,29 @@
+package com.fannie.soap.timeserver;
+
+public class TimeServerImp implements ITimeServer {
+
+	@Override
+	public String checkCreditScore(String name, int score) {
+		if(score < 400){
+			return "Sorry Mr/Ms/Mrs" + name +" you cannot have loan";
+		}else if(score>=400 && score < 700){
+			return "You have avg Credit Score Mr/Ms/Mrs "+ name +" you can get max of 1 million";
+		}else{
+			return "You are good to have loan pls talk to us Mr/Ms/Mrs "+ name;
+		}
+
+	}
+
+	@Override
+	public String getAddress() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getPrice(String from, String to) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
