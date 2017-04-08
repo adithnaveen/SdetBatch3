@@ -1,0 +1,34 @@
+<html>
+
+    <head>
+        <script type="text/javascript">
+            function fnPutToDiv(){
+                var div = document.getElementById("mydiv");
+                name =prompt("Enter Your name");
+                div.innerHTML = "<h1>Your have enterd Name as " 
+                        + name +"</h1><br/>";
+            }
+
+            function fnGetToDiv(){
+                var val= document.getElementById("mydiv1").innerHTML
+                alert(val)
+            }
+        </script>
+
+        <style type="text/css">
+            .mystyle{
+                font-family:arial;
+                background-color:cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>this is from html </h1>
+            <div id="mydiv" class="mystyle"></div>
+            <div id="mydiv1">Some data from div</div>
+            <input type="button" onclick="fnPutToDiv()" value="Click Me"/>
+            <input type="button" 
+            onclick="alert(document.getElementById('mydiv1').innerHTML)"
+                value="Click Me"/>
+    </body>
+</html>

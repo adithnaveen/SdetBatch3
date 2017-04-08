@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function fnSample(){
+                obj = new Object;
+                obj.val1 = 100;
+                obj.val2 = 200;
+
+                console.log(obj.val1 +", " + obj.val2)
+                console.log(obj)
+            }
+
+            // we dont have the key word called class 
+            // rather function is treated as class 
+            // all public function are prototyp functions 
+            // you can have previlleged methods which is 
+            // accessable outside as prototype methods 
+            // if you have var(private) variables or functions 
+            // the prototyp functions cannot access, rather 
+            // previlleged functions can access 
+            function Emp(empId, empName){
+                this.empId = empId;
+                this.empName = empName;
+
+                // all private functions has to be written in the 
+                // function/ class where it is defined  
+                
+                var myvar = "hi";
+
+                this.fn = function(){
+                console.log("Emp Id --> " +this.empId);
+                console.log("Emp Name --> " + this.empName);
+                myvar = "bye";
+                console.log("my val -> " + myvar );
+                }
+            }
+          
+          // prototype is to represent it is a public 
+            Emp.prototype.display = function(){
+                console.log("Emp Id :" +this.empId);
+                console.log("Emp Name " + this.empName);
+            }
+
+
+            function fnArray(){
+                arr = new Array(3); // -> extends from Object 
+                arr[0] = 10;
+                arr[1] = 20;
+                arr[2] = 30;
+                arr[3] = "hello";
+                arr[4] = new Emp(101, "Kiran");
+
+                console.log("Size is  " + arr.length);
+                console.log(arr);
+            }
+
+            function fnArray1(){
+                arr = new Array("sun", "mon", "tue");
+                console.log(arr);
+                arr.push("wed", "thu");
+                console.log(arr);
+                arr.pop();
+                console.log(arr);
+                arr.pop();
+                console.log(arr);
+                arr.unshift("SAT");
+                console.log(arr);
+                arr.shift();
+                console.log(arr);
+                
+                arr.splice(1, 1, "FANNIMAE", "RESTON");
+                console.log(arr);
+
+                var newarray = new Array("testing", "for", "slice", "in ", "js");
+              console.log(newarray.slice(0,3));
+                
+            }
+
+
+
+
+
+
+
+
+
+        </script>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var  emp = new Emp(101, "Bharathi")
+           //  emp.display();
+           //  emp.fn();
+           fnArray1();
+        </script>
+    </body>
+</html>

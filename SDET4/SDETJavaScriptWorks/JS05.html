@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function fnGetBgColor(){
+                var tag = document.body;
+
+                console.log(tag.attributes.length);
+                for(i=0; i<tag.attributes.length; i++){
+                    console.log(tag.attributes[i].nodeValue)
+                }
+            }
+
+            function fnSetBgColor(color){
+                document.body.setAttribute('bgcolor', color);
+            }
+        </script>
+    </head>
+    <body bgcolor="cyan">
+        <input type="button" onclick="fnGetBgColor()" value="GetColor" />
+
+        <input type="button" onclick="fnSetBgColor('blue')" value="Blue" />
+        <input type="button" onclick="fnSetBgColor('green')" value="Green" />
+    </body>
+</html>
