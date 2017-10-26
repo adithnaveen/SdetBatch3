@@ -1,0 +1,43 @@
+
+IF you do this, it will not prompt you for the passphrase everytime you do push or pull
+
+vi ~/.bash_profile 
+
+
+then 
+
+
+press "G" 
+
+
+then "p" paste the bash script 
+
+
+# {{{
+
+SSH_ENV="$HOME/.ssh/environment"
+
+function start_agent {
+    echo "Initialising new SSH agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo succeeded
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add;
+}
+
+# Source SSH settings, if applicable
+
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+
+Save :wq
+    start_agent;
+fi
+#}}}
+
